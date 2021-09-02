@@ -4,6 +4,7 @@ from django.urls import path, include
 urlpatterns = [
     # this is the homepage, that's why we left it blank.
     path('', include('pages.urls')),
+    path('listings/', include('listings.urls')),
     path('admin/', admin.site.urls),
 ]
 
