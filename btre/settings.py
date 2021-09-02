@@ -119,7 +119,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+# We wanna add a "STATIC_ROOT" - when we deploy our app, we run a cmd called "collectstatic", it goes into all
+# the apps and if it has a static folder it takes it out and puts into root static folder. So, that's what we are
+# defining here.
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'btre/static')
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
