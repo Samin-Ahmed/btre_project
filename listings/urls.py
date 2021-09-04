@@ -1,8 +1,7 @@
 from django.urls import path
 from . import views
 
-# We need to link our listings routes here
-
+# We need to link our pages routes here
 urlpatterns = [
     path('', views.index, name='listings'),
     path('<int:listing_id>', views.listing, name='listing'),
