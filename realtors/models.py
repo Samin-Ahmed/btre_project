@@ -18,5 +18,4 @@ class Realtor(models.Model):
 
 # Now we wanna put this all into the database. So, we need to make a migration and run it. 
 # First we "python manage.py makemigrations" then "python manage.py migrate".
-
     
