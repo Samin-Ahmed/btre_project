@@ -1,0 +1,16 @@
+<!--This page is to edit the UI of the admin template on the local host admin site-->
+
+<!--This code below is to change the "Django Administration" on the admin page to our logo followed by "Admin Area"-->
+{% extends 'admin/base.html' %}
+{% load static %}
+
+{% block branding %}
+ <h1 id="head">
+   <img src="{% static 'img/logo.png' %}" alt="BT Real Estate" height="50" width="80" class="brand_img"> Admin Area
+ </h1>
+{% endblock %}
+
+<!--For the CSS we have to add another block as seen below-->
+{% block extrastyle %}
+ <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+{% endblock %}
